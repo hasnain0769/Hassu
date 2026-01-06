@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hasnain Ashraf | Digital Creator & Web Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:#121212;color:#e0e0e0;scroll-behavior:smooth;overflow-x:hidden;}
+
+/* Header */
+header{position:fixed;width:100%;background:#1f1f1f;padding:20px 50px;display:flex;justify-content:space-between;align-items:center;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.5);}
+header h1{color:#1abc9c;}
+nav a{margin-left:25px;font-weight:500;color:#e0e0e0;transition:0.3s;}
+nav a:hover{color:#1abc9c;}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 20px;
+background:linear-gradient(-45deg,#121212,#1f1f1f,#1a1a1a,#0f0f0f);background-size:400% 400%;animation:gradientBG 15s ease infinite;}
+@keyframes gradientBG{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero h2{font-size:3rem;margin-bottom:20px;min-height:60px;}
+.hero .typewriter{border-right:3px solid #1abc9c;padding-right:5px;white-space: nowrap;overflow: hidden;}
+.hero p{font-size:1.2rem;color:#b0b0b0;max-width:700px;margin:0 auto;}
+.btn{display:inline-block;padding:12px 35px;margin-top:30px;font-weight:600;color:#fff;border-radius:8px;background:linear-gradient(90deg,#1abc9c,#16a085);transition:0.3s;}
+.btn:hover{background:linear-gradient(90deg,#16a085,#1abc9c);}
+
+/* Section Titles */
+section h2{margin-bottom:40px;font-size:2.5rem;text-align:center;color:#1abc9c;}
+
+/* Projects / Content / Ideas Cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;padding:0 20px;}
+.card{background:#1f1f1f;padding:20px;border-radius:12px;transition:0.5s;transform:translateY(20px);opacity:0;}
+.card.show{opacity:1;transform:translateY(0);}
+.card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 15px 25px rgba(0,0,0,0.6);}
+.card h3{margin-bottom:10px;}
+.card p{color:#b0b0b0;}
+
+/* Contact Form */
+#contact{padding:100px 20px;text-align:center;background:#1a1a1a;}
+.contact-form{max-width:500px;margin:0 auto;text-align:left;}
+.contact-form label{display:block;margin-bottom:5px;margin-top:15px;color:#b0b0b0;}
+.contact-form select, .contact-form textarea{width:100%;padding:10px;border-radius:6px;border:none;background:#2a2a2a;color:#fff;}
+.contact-form select:focus, .contact-form textarea:focus{outline:2px solid #1abc9c;}
+.contact-form button{margin-top:20px;padding:12px 30px;background:#1abc9c;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:0.3s;}
+.contact-form button:hover{background:#16a085;}
+
+/* Footer */
+footer{text-align:center;padding:40px 20px;background:#1f1f1f;color:#b0b0b0;}
+
+/* Floating Social Buttons */
+.social-icons{position:fixed;top:50%;left:20px;transform:translateY(-50%);display:flex;flex-direction:column;gap:15px;z-index:1000;}
+.social-icons a{background:#1abc9c;color:#fff;width:45px;height:45px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:20px;transition:0.3s;}
+.social-icons a:hover{background:#16a085;}
+
+@media(max-width:768px){header{flex-direction:column;gap:10px;}.hero h2{font-size:2.2rem;}section h2{font-size:2rem;}.social-icons{left:auto;right:20px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Hasnain Ashraf</h1>
+  <nav>
+    <a href="#webdev">Web Dev</a>
+    <a href="#content">Content Creation</a>
+    <a href="#shorts">YouTube Ideas</a>
+    <a href="#contact">Start Journey</a>
+  </nav>
+</header>
+
+<!-- Floating Social Icons -->
+<div class="social-icons">
+  <a href="https://wa.me/918434149092" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.instagram.com/hasnainz_ashraf/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+</div>
+
+<!-- Hero Section -->
+<section class="hero" id="about">
+  <h2 class="typewriter" id="heroType"></h2>
+  <p>All-in-one digital creator: Web Development, Script & Content Creation, YouTube Shorts Ideas. Let's create magic together!</p>
+</section>
+
+<!-- Web Development Section -->
+<section id="webdev">
+  <h2>Web Development</h2>
+  <div class="cards">
+    <div class="card"><h3>Portfolio Website</h3><p>Modern dark-themed portfolio using HTML/CSS/JS.</p></div>
+    <div class="card"><h3>Landing Page</h3><p>Professional landing pages for startups.</p></div>
+    <div class="card"><h3>E-commerce Store</h3><p>Responsive online stores with modern UI/UX.</p></div>
+  </div>
+</section>
+
+<!-- Content Creation Section -->
+<section id="content">
+  <h2>Content Creation</h2>
+  <div class="cards">
+    <div class="card"><h3>Scripts</h3><p>Engaging scripts for videos, ads, and reels.</p></div>
+    <div class="card"><h3>Ideas</h3><p>Creative content strategies for social media.</p></div>
+    <div class="card"><h3>Editing Concepts</h3><p>Unique video editing ideas to attract views.</p></div>
+  </div>
+</section>
+
+<!-- YouTube Shorts Ideas Section -->
+<section id="shorts">
+  <h2>YouTube Shorts Ideas</h2>
+  <div class="cards">
+    <div class="card"><h3>Viral Tips</h3><p>Trending ideas that gain attention fast.</p></div>
+    <div class="card"><h3>Mini Tutorials</h3><p>Quick informative shorts for education & fun.</p></div>
+    <div class="card"><h3>Challenges & Reactions</h3><p>Entertaining short concepts for engagement.</p></div>
+  </div>
+</section>
+
+<!-- Contact / Start Journey Section -->
+<section id="contact">
+  <h2>Start Your Journey With Me</h2>
+  <div class="contact-form">
+    <form onsubmit="handleForm(event)">
+      <label>Budget</label>
+      <select id="budget" required>
+        <option value="" disabled selected>Select Budget</option>
+        <option>₹1000 - ₹5000</option>
+        <option>₹5000 - ₹10,000</option>
+        <option>₹10,000+</option>
+      </select>
+      <label>Service Required</label>
+      <select id="service" required>
+        <option value="" disabled selected>Select Service</option>
+        <option>Web Development</option>
+        <option>Content Creation</option>
+        <option>YouTube Shorts Idea</option>
+      </select>
+      <label>Message / Details</label>
+      <textarea id="message" rows="5" placeholder="Describe your project / requirement" required></textarea>
+      <button type="submit">Start Journey With Me</button>
+    </form>
+  </div>
+</section>
+
+<footer>&copy; 2026 Hasnain Ashraf. All Rights Reserved.</footer>
+
+<script>
+// Hero Typewriter
+const heroType = document.getElementById("heroType");
+const phrases = ["I build websites","I create content","I ideate viral shorts"];
+let pIndex=0, cIndex=0, deleting=false;
+function typeLoop(){
+  let current = phrases[pIndex];
+  if(!deleting){ heroType.textContent = current.substring(0,cIndex+1); cIndex++;
+    if(cIndex===current.length){deleting=true; setTimeout(typeLoop,1000); return; }
+  } else { heroType.textContent = current.substring(0,cIndex-1); cIndex--;
+    if(cIndex===0){deleting=false; pIndex=(pIndex+1)%phrases.length;} }
+  setTimeout(typeLoop,deleting?50:100);
+}
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{ if(entry.isIntersecting){typeLoop(); observer.unobserve(entry.target);}});
+});
+observer.observe(heroType);
+
+// Cards scroll animation
+const cards = document.querySelectorAll('.card');
+const cardObserver = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('show'); });
+},{threshold:0.3});
+cards.forEach(card=>cardObserver.observe(card));
+
+// Contact form → WhatsApp
+function handleForm(event){
+  event.preventDefault();
+  const budget=document.getElementById('budget').value;
+  const service=document.getElementById('service').value;
+  const message=document.getElementById('message').value;
+  const whatsappURL = `https://wa.me/918434149092?text=Hello Hasnain,%20Budget:%20${encodeURIComponent(budget)}.%20Service:%20${encodeURIComponent(service)}.%20Details:%20${encodeURIComponent(message)}`;
+  window.open(whatsappURL,'_blank');
+}
+</script>
+
+</body>
+</html>
