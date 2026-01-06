@@ -4,115 +4,287 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hasnain Ashraf | Digital Creator & Web Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Hasnain Ashraf – web developer & digital creator. I build modern websites, write scripts and ideate viral YouTube Shorts for creators and brands.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-body{background:#121212;color:#e0e0e0;scroll-behavior:smooth;overflow-x:hidden;}
+body{background:#050412;color:#f5f5ff;scroll-behavior:smooth;overflow-x:hidden;}
 
 /* Header */
-header{position:fixed;width:100%;background:#1f1f1f;padding:20px 50px;display:flex;justify-content:space-between;align-items:center;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.5);}
-header h1{color:#1abc9c;}
-nav a{margin-left:25px;font-weight:500;color:#e0e0e0;transition:0.3s;}
-nav a:hover{color:#1abc9c;}
+header{
+  position:fixed;inset-inline:0;top:0;
+  background:rgba(9,8,28,0.95);
+  padding:16px 20px;
+  display:flex;justify-content:space-between;align-items:center;
+  z-index:1000;
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+header h1{
+  font-size:1.1rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#b08cff;
+}
+nav a{
+  margin-left:18px;
+  font-weight:500;
+  font-size:.9rem;
+  color:#d9d9ff;
+  text-decoration:none;
+  position:relative;
+  padding-bottom:2px;
+}
+nav a::after{
+  content:"";
+  position:absolute;left:0;bottom:0;
+  width:0;height:2px;
+  background:linear-gradient(90deg,#b08cff,#4ef2ff);
+  transition:.25s;
+}
+nav a:hover{color:#fff;}
+nav a:hover::after{width:100%;}
 
 /* Hero */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 20px;
-background:linear-gradient(-45deg,#121212,#1f1f1f,#1a1a1a,#0f0f0f);background-size:400% 400%;animation:gradientBG 15s ease infinite;}
-@keyframes gradientBG{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-.hero h2{font-size:3rem;margin-bottom:20px;min-height:60px;}
-.hero .typewriter{border-right:3px solid #1abc9c;padding-right:5px;white-space: nowrap;overflow: hidden;}
-.hero p{font-size:1.2rem;color:#b0b0b0;max-width:700px;margin:0 auto;}
-.btn{display:inline-block;padding:12px 35px;margin-top:30px;font-weight:600;color:#fff;border-radius:8px;background:linear-gradient(90deg,#1abc9c,#16a085);transition:0.3s;}
-.btn:hover{background:linear-gradient(90deg,#16a085,#1abc9c);}
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  text-align:center;
+  padding:0 18px;
+  background:
+    radial-gradient(circle at top,#3b2667 0,#050412 55%),
+    radial-gradient(circle at bottom,#12163a 0,transparent 55%);
+}
+.hero h2{
+  font-size:2.6rem;
+  margin-bottom:18px;
+  min-height:60px;
+}
+.hero .typewriter{
+  border-right:3px solid #4ef2ff;
+  padding-right:6px;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.hero p{
+  font-size:1.05rem;
+  color:#b4b4df;
+  max-width:680px;
+  margin:0 auto;
+}
+.btn{
+  display:inline-block;
+  padding:12px 32px;
+  margin-top:26px;
+  font-weight:600;
+  color:#050412;
+  border-radius:999px;
+  background:linear-gradient(120deg,#b08cff,#ff5fa2,#4ef2ff);
+  background-size:180% 180%;
+  box-shadow:0 16px 40px rgba(0,0,0,0.8);
+  text-decoration:none;
+  font-size:.95rem;
+  transition:.25s;
+}
+.btn:hover{
+  filter:brightness(1.08);
+  transform:translateY(-1px);
+}
 
-/* Section Titles */
-section h2{margin-bottom:40px;font-size:2.5rem;text-align:center;color:#1abc9c;}
+/* Sections */
+section{padding:100px 0 60px;}
+section h2{
+  margin-bottom:32px;
+  font-size:2.1rem;
+  text-align:center;
+  color:#e5ddff;
+}
 
-/* Projects / Content / Ideas Cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;padding:0 20px;}
-.card{background:#1f1f1f;padding:20px;border-radius:12px;transition:0.5s;transform:translateY(20px);opacity:0;}
+/* Cards */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
+  padding:0 18px;
+}
+.card{
+  background:radial-gradient(circle at top,#2a214d,#09081c);
+  padding:18px 18px 20px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.06);
+  box-shadow:0 14px 32px rgba(0,0,0,0.85);
+  transform:translateY(20px);
+  opacity:0;
+  transition:.5s;
+}
 .card.show{opacity:1;transform:translateY(0);}
-.card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 15px 25px rgba(0,0,0,0.6);}
-.card h3{margin-bottom:10px;}
-.card p{color:#b0b0b0;}
+.card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 18px 40px rgba(0,0,0,0.9);
+}
+.card h3{
+  margin-bottom:6px;
+  font-size:1.04rem;
+  color:#f5f5ff;
+}
+.card p{
+  color:#b4b4df;
+  font-size:.9rem;
+}
 
-/* Contact Form */
-#contact{padding:100px 20px;text-align:center;background:#1a1a1a;}
-.contact-form{max-width:500px;margin:0 auto;text-align:left;}
-.contact-form label{display:block;margin-bottom:5px;margin-top:15px;color:#b0b0b0;}
-.contact-form select, .contact-form textarea{width:100%;padding:10px;border-radius:6px;border:none;background:#2a2a2a;color:#fff;}
-.contact-form select:focus, .contact-form textarea:focus{outline:2px solid #1abc9c;}
-.contact-form button{margin-top:20px;padding:12px 30px;background:#1abc9c;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:0.3s;}
-.contact-form button:hover{background:#16a085;}
+/* Contact */
+#contact{
+  padding:100px 18px 70px;
+  background:radial-gradient(circle at top,#251a4b,#050412);
+  text-align:center;
+}
+.contact-form{
+  max-width:520px;
+  margin:0 auto;
+  text-align:left;
+  background:rgba(7,7,30,0.9);
+  border-radius:20px;
+  padding:22px 20px 24px;
+  border:1px solid rgba(255,255,255,0.05);
+  box-shadow:0 18px 45px rgba(0,0,0,0.9);
+}
+.contact-form label{
+  display:block;
+  margin-bottom:6px;
+  margin-top:14px;
+  color:#c3c3f2;
+  font-size:.88rem;
+}
+.contact-form select,
+.contact-form textarea{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  background:#14142e;
+  color:#f5f5ff;
+  font-size:.9rem;
+}
+.contact-form select:focus,
+.contact-form textarea:focus{
+  outline:2px solid #4ef2ff;
+}
+.contact-form button{
+  margin-top:18px;
+  padding:11px 28px;
+  background:linear-gradient(120deg,#4ef2ff,#b08cff);
+  color:#050412;
+  border:none;
+  border-radius:999px;
+  font-weight:600;
+  cursor:pointer;
+  font-size:.95rem;
+  box-shadow:0 16px 38px rgba(0,0,0,0.9);
+  transition:.25s;
+}
+.contact-form button:hover{
+  filter:brightness(1.06);
+  transform:translateY(-1px);
+}
 
 /* Footer */
-footer{text-align:center;padding:40px 20px;background:#1f1f1f;color:#b0b0b0;}
+footer{
+  text-align:center;
+  padding:26px 16px 30px;
+  background:#09081c;
+  color:#a0a0d0;
+  font-size:.8rem;
+}
 
-/* Floating Social Buttons */
-.social-icons{position:fixed;top:50%;left:20px;transform:translateY(-50%);display:flex;flex-direction:column;gap:15px;z-index:1000;}
-.social-icons a{background:#1abc9c;color:#fff;width:45px;height:45px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:20px;transition:0.3s;}
-.social-icons a:hover{background:#16a085;}
+/* Social icons */
+.social-icons{
+  position:fixed;
+  top:50%;
+  left:16px;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:900;
+}
+.social-icons a{
+  background:radial-gradient(circle at 0 0,#b08cff,#4ef2ff);
+  color:#050412;
+  width:42px;height:42px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  font-size:18px;
+  box-shadow:0 12px 28px rgba(0,0,0,0.9);
+  transition:.25s;
+}
+.social-icons a:hover{
+  transform:translateY(-2px) scale(1.05);
+  filter:brightness(1.08);
+}
 
-@media(max-width:768px){header{flex-direction:column;gap:10px;}.hero h2{font-size:2.2rem;}section h2{font-size:2rem;}.social-icons{left:auto;right:20px;}}
+/* Responsive */
+@media(max-width:768px){
+  header{flex-direction:column;gap:8px;padding-inline:14px;}
+  nav a{margin-left:12px;font-size:.85rem;}
+  .hero h2{font-size:2.1rem;}
+  section h2{font-size:1.9rem;}
+  .social-icons{left:auto;right:16px;}
+}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Hasnain Ashraf</h1>
+  <h1>HASNAIN ASHRAF</h1>
   <nav>
     <a href="#webdev">Web Dev</a>
-    <a href="#content">Content Creation</a>
-    <a href="#shorts">YouTube Ideas</a>
+    <a href="#content">Content</a>
+    <a href="#shorts">Shorts Ideas</a>
     <a href="#contact">Start Journey</a>
   </nav>
 </header>
 
-<!-- Floating Social Icons -->
 <div class="social-icons">
   <a href="https://wa.me/918434149092" target="_blank"><i class="fab fa-whatsapp"></i></a>
   <a href="https://www.instagram.com/hasnainz_ashraf/" target="_blank"><i class="fab fa-instagram"></i></a>
   <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
 </div>
 
-<!-- Hero Section -->
 <section class="hero" id="about">
   <h2 class="typewriter" id="heroType"></h2>
-  <p>All-in-one digital creator: Web Development, Script & Content Creation, YouTube Shorts Ideas. Let's create magic together!</p>
+  <p>All‑in‑one digital creator: cinematic web experiences, scripts that hold attention, and YouTube Shorts ideas built to travel fast.</p>
+  <a class="btn" href="#contact">Start Your Project</a>
 </section>
 
-<!-- Web Development Section -->
 <section id="webdev">
   <h2>Web Development</h2>
   <div class="cards">
-    <div class="card"><h3>Portfolio Website</h3><p>Modern dark-themed portfolio using HTML/CSS/JS.</p></div>
-    <div class="card"><h3>Landing Page</h3><p>Professional landing pages for startups.</p></div>
-    <div class="card"><h3>E-commerce Store</h3><p>Responsive online stores with modern UI/UX.</p></div>
+    <div class="card"><h3>Cinematic Portfolios</h3><p>Dark, story‑driven portfolios for creators, artists and freelancers.</p></div>
+    <div class="card"><h3>High‑Impact Landing Pages</h3><p>Sharp, focused pages built to collect leads and sell one clear offer.</p></div>
+    <div class="card"><h3>Storefronts with WhatsApp Checkout</h3><p>Simple product pages where customers tap once and land in your DMs.</p></div>
   </div>
 </section>
 
-<!-- Content Creation Section -->
 <section id="content">
   <h2>Content Creation</h2>
   <div class="cards">
-    <div class="card"><h3>Scripts</h3><p>Engaging scripts for videos, ads, and reels.</p></div>
-    <div class="card"><h3>Ideas</h3><p>Creative content strategies for social media.</p></div>
-    <div class="card"><h3>Editing Concepts</h3><p>Unique video editing ideas to attract views.</p></div>
+    <div class="card"><h3>Video & Ad Scripts</h3><p>Hooks, story beats and CTAs written for retention and clicks.</p></div>
+    <div class="card"><h3>Content Playbooks</h3><p>30‑day content maps so you never open the camera without a plan.</p></div>
+    <div class="card"><h3>Editing Concepts</h3><p>Transitions, pacing and text ideas that give your edits a signature style.</p></div>
   </div>
 </section>
 
-<!-- YouTube Shorts Ideas Section -->
 <section id="shorts">
   <h2>YouTube Shorts Ideas</h2>
   <div class="cards">
-    <div class="card"><h3>Viral Tips</h3><p>Trending ideas that gain attention fast.</p></div>
-    <div class="card"><h3>Mini Tutorials</h3><p>Quick informative shorts for education & fun.</p></div>
-    <div class="card"><h3>Challenges & Reactions</h3><p>Entertaining short concepts for engagement.</p></div>
+    <div class="card"><h3>Trend‑Ready Hooks</h3><p>Swipe‑stopping openings tailored to your niche and audience.</p></div>
+    <div class="card"><h3>Mini Tutorials</h3><p>Quick explainers that teach something real in under 30 seconds.</p></div>
+    <div class="card"><h3>Challenges & Reactions</h3><p>Formats built for comments, duets and repeat views.</p></div>
   </div>
 </section>
 
-<!-- Contact / Start Journey Section -->
 <section id="contact">
   <h2>Start Your Journey With Me</h2>
   <div class="contact-form">
@@ -132,7 +304,7 @@ footer{text-align:center;padding:40px 20px;background:#1f1f1f;color:#b0b0b0;}
         <option>YouTube Shorts Idea</option>
       </select>
       <label>Message / Details</label>
-      <textarea id="message" rows="5" placeholder="Describe your project / requirement" required></textarea>
+      <textarea id="message" rows="5" placeholder="Describe your project / channel / goals" required></textarea>
       <button type="submit">Start Journey With Me</button>
     </form>
   </div>
@@ -143,26 +315,35 @@ footer{text-align:center;padding:40px 20px;background:#1f1f1f;color:#b0b0b0;}
 <script>
 // Hero Typewriter
 const heroType = document.getElementById("heroType");
-const phrases = ["I build websites","I create content","I ideate viral shorts"];
+const phrases = ["I build cinematic websites","I write hooks and scripts","I design viral Shorts systems"];
 let pIndex=0, cIndex=0, deleting=false;
 function typeLoop(){
-  let current = phrases[pIndex];
-  if(!deleting){ heroType.textContent = current.substring(0,cIndex+1); cIndex++;
-    if(cIndex===current.length){deleting=true; setTimeout(typeLoop,1000); return; }
-  } else { heroType.textContent = current.substring(0,cIndex-1); cIndex--;
-    if(cIndex===0){deleting=false; pIndex=(pIndex+1)%phrases.length;} }
-  setTimeout(typeLoop,deleting?50:100);
+  const current = phrases[pIndex];
+  if(!deleting){
+    heroType.textContent = current.substring(0,cIndex+1);
+    cIndex++;
+    if(cIndex===current.length){deleting=true;setTimeout(typeLoop,900);return;}
+  }else{
+    heroType.textContent = current.substring(0,cIndex-1);
+    cIndex--;
+    if(cIndex===0){deleting=false;pIndex=(pIndex+1)%phrases.length;}
+  }
+  setTimeout(typeLoop,deleting?45:95);
 }
 const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{ if(entry.isIntersecting){typeLoop(); observer.unobserve(entry.target);}});
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){typeLoop();observer.unobserve(entry.target);}
+  });
 });
 observer.observe(heroType);
 
 // Cards scroll animation
 const cards = document.querySelectorAll('.card');
 const cardObserver = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('show'); });
-},{threshold:0.3});
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add('show');
+  });
+},{threshold:0.25});
 cards.forEach(card=>cardObserver.observe(card));
 
 // Contact form → WhatsApp
@@ -171,7 +352,8 @@ function handleForm(event){
   const budget=document.getElementById('budget').value;
   const service=document.getElementById('service').value;
   const message=document.getElementById('message').value;
-  const whatsappURL = `https://wa.me/918434149092?text=Hello Hasnain,%20Budget:%20${encodeURIComponent(budget)}.%20Service:%20${encodeURIComponent(service)}.%20Details:%20${encodeURIComponent(message)}`;
+  const text = `Hello Hasnain,%0ABudget: ${encodeURIComponent(budget)}%0AService: ${encodeURIComponent(service)}%0ADetails: ${encodeURIComponent(message)}`;
+  const whatsappURL = `https://wa.me/918434149092?text=${text}`;
   window.open(whatsappURL,'_blank');
 }
 </script>
